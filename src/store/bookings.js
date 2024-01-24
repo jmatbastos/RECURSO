@@ -30,7 +30,7 @@ export const useBookingsStore = defineStore({
     },  
     async getMybookingsDB(client_id) {
             try {
-                const response = await fetch(`http://daw.deei.fct.ualg.pt/~a555554/api/bookings.php?client_id=${client_id}`)
+                const response = await fetch(`http://daw.deei.fct.ualg.pt/~a12345/RECURSO/api/bookings.php?client_id=${client_id}`)
                 const data = await response.json()
                 console.log('received data:', data)                
                 this.addbookings(data)
@@ -50,7 +50,7 @@ export const useBookingsStore = defineStore({
           //client_id: "1"
           //}        
           try {
-              const response = await fetch('http://daw.deei.fct.ualg.pt/~a555554/api/bookings.php', {
+              const response = await fetch('http://daw.deei.fct.ualg.pt/~a12345/RECURSO/api/bookings.php', {
                   method: 'POST',
                   body: JSON.stringify(newBooking),
                   headers: { 'Content-type': 'text/html; charset=UTF-8' },

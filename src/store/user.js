@@ -36,7 +36,7 @@ export const useUserStore = defineStore({
       //"password":"123456"			
       //}
       try {
-        const response = await fetch(`http://daw.deei.fct.ualg.pt/~a555554/api/clients.php?email=${user.email}`, {
+        const response = await fetch(`http://daw.deei.fct.ualg.pt/~a12345/RECURSO/api/clients.php?email=${user.email}`, {
           method: 'GET',
         })
         const data = await response.json()
@@ -59,7 +59,7 @@ export const useUserStore = defineStore({
     }, 
     async addUserDB() {
       try {
-          const response = await fetch('http://daw.deei.fct.ualg.pt/~a555554/api/clients.php', {
+          const response = await fetch('http://daw.deei.fct.ualg.pt/~a12345/RECURSO/api/clients.php', {
             method: 'POST',
             body: JSON.stringify(this.tmp_user),
             headers: { 'Content-type': 'text/html; charset=UTF-8' },
@@ -80,7 +80,7 @@ export const useUserStore = defineStore({
       //"password":"123456"			
       //}
       try {
-        const response = await fetch(`http://daw.deei.fct.ualg.pt/~a555554/api/clients.php?email=${user.email}&password=${user.password}`)
+        const response = await fetch(`http://daw.deei.fct.ualg.pt/~a12345/RECURSO/api/clients.php?email=${user.email}&password=${user.password}`)
         const data = await response.json()
         if ( data == null) {
           alert('Error: Wrong credentials')

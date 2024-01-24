@@ -37,7 +37,7 @@ export const useBeveragesStore = defineStore({
     },  
     async getBeveragesDB() {
             try {
-                const response = await fetch('http://daw.deei.fct.ualg.pt/~a555554/api/beverages.php')
+                const response = await fetch('http://daw.deei.fct.ualg.pt/~a12345/RECURSO/api/beverages.php')
                 const data = await response.json()
                 console.log('received data:', data)                
                 this.addbeverages(data)

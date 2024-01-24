@@ -22,7 +22,7 @@ export const useCategoriesStore = defineStore({
     },
     async getCategoriesDB() {
             try {
-                const response = await fetch('http://daw.deei.fct.ualg.pt/~a555554/api/categories.php')
+                const response = await fetch('http://daw.deei.fct.ualg.pt/~a12345/RECURSO/api/categories.php')
                 const data = await response.json()
                 console.log('received data:', data)                
                 this.addCategories(data)
