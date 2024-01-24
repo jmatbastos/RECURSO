@@ -53,7 +53,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['email']) && isset($_GET['
 		mysqli_close($db);
 		
 		// filter non UTF-8 characters
-		$user = mb_convert_encoding($user,'UTF-8', 'ISO-8859-1');
+		//$user = mb_convert_encoding($user,'UTF-8', 'ISO-8859-1');
 		// convert to JSON
 		$json=json_encode($user);
 
@@ -109,7 +109,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 		mysqli_close($db);
 		
 		// filter non UTF-8 characters
-		$user = mb_convert_encoding($user,'UTF-8', 'ISO-8859-1');
+		//$user = mb_convert_encoding($user,'UTF-8', 'ISO-8859-1');
 		// convert to JSON
 		$json=json_encode($user);
 
