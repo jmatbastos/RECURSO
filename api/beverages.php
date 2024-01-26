@@ -28,7 +28,7 @@ $db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
 	header("Access-Control-Allow-Headers: Authorization, Origin, User-Token, X-Requested-With, Content-Type");
 
 	// filter non UTF-8 characters
-	$beverages = mb_convert_encoding($beverages,'UTF-8','ISO-8859-1');
+	//$beverages = mb_convert_encoding($beverages,'UTF-8','ISO-8859-1');
 	// convert to JSON
 	$beveragesJSON = json_encode($beverages);
 	echo $beveragesJSON;
